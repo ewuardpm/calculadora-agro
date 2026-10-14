@@ -1,5 +1,15 @@
 # React + Vite
 
+## Publicación en agro-delivery.com/calculadora
+
+Esta app se publica automáticamente en `https://agro-delivery.com/calculadora/`, protegida con usuario y contraseña. El sitio de Agro Delivery toma este repositorio, lo compila y publica solo el resultado estático. Para que siga funcionando:
+
+- **`main` es producción.** Cada commit en `main` se publica solo, en pocos minutos. Usa otra rama para lo que todavía no esté listo.
+- **Salida 100 % estática.** `npm ci` + `npx vite build` deben generar solo HTML, JS, CSS e imágenes: sin backend, sin variables de entorno ni secretos.
+- **Funciona bajo una subruta.** El build se hace con `--base=/calculadora/`. No escribas URLs absolutas a la raíz (`/algo`) en el código: importa los assets desde `src/` o usa `import.meta.env.BASE_URL` para los de `public/`.
+- **Sin scripts de instalación.** Las dependencias se instalan con `npm ci --ignore-scripts`, así que el build no debe depender de scripts `postinstall`.
+- **Versión de Node.** Si necesitas una versión específica, declárala en `.nvmrc` o en `engines` del `package.json`; si no, se usa Node 22.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
