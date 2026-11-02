@@ -4,7 +4,7 @@ import { registrarOrden } from './pedidoSemanal.js';
 // ================= CONFIGURACIÓN (edita aquí) =================
 // Las sucursales se agregan y borran desde la app (sección 🏬 Sucursales)
 // Palabras que se eliminan automáticamente de los nombres de producto
-const PALABRAS_QUITAR = ['MICROGREEN', 'ARAUAK'];
+const PALABRAS_QUITAR = ['MICROGREEN', 'ARAUAK', 'DE', 'FRIJOL', 'GERMINADO'];
 // Dirección del Worker que lee las imágenes
 const API_URL = 'https://agro-calculadora.ewuardp.workers.dev/api/extract';
 // ==============================================================
